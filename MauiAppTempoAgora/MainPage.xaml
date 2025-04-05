@@ -10,9 +10,14 @@
             <Entry x:Name="txt_cidade"/>
             <Button Text="Buscar" Clicked="Button_Clicked" />
 
+
+            <Grid ColumnDefinitions="170, *" >
+                <Label Text="Previsão do Tempo para: "  Grid.Column="0"/>
+                <Label Text="{Binding Source={x:Reference txt_cidade}, Path=Text}" Grid.Column="1"/>
+            </Grid>
+
             <Label x:Name="lbl_res" />
 
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
