@@ -51,6 +51,14 @@ namespace MauiAppTempoAgora
                 {
                     await DisplayAlert("Ops", "Sem conexão com a internet", "OK");
                 }
+                else if (ex.Message == "Connection failure")
+                {
+                    await DisplayAlert("Ops", "Sem conexão com a internet", "OK");
+                }
+                else if (ex.Message == "Unable to resolve host \"api.openweathermap.org\": No address associated with hostname")
+                {
+                    await DisplayAlert("Ops", "Sem conexão com a internet", "OK");
+                }
                 else
                 {
                     await DisplayAlert("Ops", ex.Message, "OK");
