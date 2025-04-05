@@ -28,6 +28,7 @@ namespace MauiAppTempoAgora.Services
                         DateTime sunset = time.AddSeconds((double)rascunho["sys"]["sunset"]).ToLocalTime();
 
                         t = new()
+
                         {
                             lat = (double)rascunho["coord"]["lat"],
                             lon = (double)rascunho["coord"]["lon"],
@@ -40,6 +41,7 @@ namespace MauiAppTempoAgora.Services
                             sunrise = sunrise.ToString(),
                             sunset = sunset.ToString(),
                         }; // Fecha obj do Tempo.
+
                     } // Fecha if se o status  servidor for sucesso
             } // fecha laço using
 

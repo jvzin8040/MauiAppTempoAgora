@@ -12,12 +12,13 @@
             <Button Text="Buscar" Clicked="Button_Clicked" />
 
 
-            <Grid ColumnDefinitions="170, *" >
-                <Label Text="Previsão do Tempo para: "  Grid.Column="0"/>
+            <Grid ColumnDefinitions="170, *" > <!-- Definindo duas colunas para organizar o layout -->
+                <Label Text="Previsão do Tempo para: "  Grid.Column="0"/> <!-- Label para exibir previsão do tempo -->           
                 <Label Text="{Binding Source={x:Reference txt_cidade}, Path=Text}" Grid.Column="1"/>
+                <!-- Label que exibe o nome da cidade digitada no Entry -->
             </Grid>
 
-            <Label x:Name="lbl_res" />
+            <Label x:Name="lbl_res" />  <!-- Label para exibir as informações sobre a previsão do tempo -->
 
         </VerticalStackLayout>
     </ScrollView>

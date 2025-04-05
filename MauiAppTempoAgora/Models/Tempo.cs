@@ -6,10 +6,10 @@
         public double? lat { get; set; }
         public double? temp_min { get; set; }
         public double? temp_max { get; set; }
-        public int? visibility { get; set; }
-        public double? speed { get; set; }
+        public int? visibility { get; set; } // adicionado para exibir a visibilidade
+        public double? speed { get; set; } // adicionado para exibir a velocidade do vento
         public string? main { get; set; }
-        public string? description { get; set; }
+        public string? description { get; set; } // adicionado para exibir a descrição do tempo
         public string? sunrise { get; set; }
         public string? sunset { get; set; }
 
