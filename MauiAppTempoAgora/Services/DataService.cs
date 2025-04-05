@@ -31,12 +31,12 @@ namespace MauiAppTempoAgora.Services
                         {
                             lat = (double)rascunho["coord"]["lat"],
                             lon = (double)rascunho["coord"]["lon"],
-                            description = (string)rascunho["weather"][0]["description"],
+                            description = (string)rascunho["weather"][0]["description"], // adicionado para exibir a descrição do tempo
                             main = (string)rascunho["weather"][0]["main"],
                             temp_min = (double)rascunho["main"]["temp_min"],
                             temp_max = (double)rascunho["main"]["temp_max"],
-                            speed = (double)rascunho["wind"]["speed"],
-                            visibility = (int)rascunho["visibility"],
+                            speed = (double)rascunho["wind"]["speed"], // adicionado para exibir a velocidade do vento
+                            visibility = (int)rascunho["visibility"], // adicionado para exibir a visibilidade
                             sunrise = sunrise.ToString(),
                             sunset = sunset.ToString(),
                         }; // Fecha obj do Tempo.

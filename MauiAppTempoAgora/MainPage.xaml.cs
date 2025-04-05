@@ -16,11 +16,11 @@ namespace MauiAppTempoAgora
         {
             try
             {
-                if (!string.IsNullOrEmpty(txt_cidade.Text))
+                if (!string.IsNullOrEmpty(txt_cidade.Text)) // verifica se o campo de texto não está vazio 
                 {
                     Tempo? t = await DataService.GetPrevisao(txt_cidade.Text);
 
-                    if (t != null)
+                    if (t != null) // verifica se o objeto Tempo não é nulo
                     {
                         string dados_previsao = $"Latitude: {t.lat}\n" +
                             $"Longitude: {t.lon}\n" +
@@ -28,15 +28,15 @@ namespace MauiAppTempoAgora
                             $"Pôr do Sol: {t.sunset}\n" +
                             $"Temp Máx: {t.temp_max}°C\n" +
                             $"Temp Mín: {t.temp_min}°C\n" +
-                            $"Velocidade do Vento: {t.speed} m/s\n" +
-                            $"Visibilidade: {t.visibility} m\n" +
-                            $"Descrição: {t.description}\n";
+                            $"Velocidade do Vento: {t.speed} m/s\n" + // adicionado para exibir a velocidade do vento
+                            $"Visibilidade: {t.visibility} m\n" + // adicionado para exibir a visibilidade
+                            $"Descrição: {t.description}\n"; // adicionado para exibir a descrição do tempo
 
                         lbl_res.Text = dados_previsao;
                     }
                     else
                     {
-                        lbl_res.Text = "Cidade não encontrada";
+                        lbl_res.Text = "Cidade não encontrada"; // adicionado para exibir mensagem de cidade não encontrada
                     }
                 }
                 else
