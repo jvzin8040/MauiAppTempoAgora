@@ -8,8 +8,12 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
+
+            <Button Text="Minha Localização" Clicked="Button_Clicked_Localizacao" />
+            <Label x:Name="lbl_coords" />
+
             <Entry x:Name="txt_cidade"/>
-            <Button Text="Buscar" Clicked="Button_Clicked" />
+            <Button Text="Buscar Previsão" Clicked="Button_Clicked_Previsao" />
 
 
             <Grid ColumnDefinitions="170, *" > <!-- Definindo duas colunas para organizar o layout -->
@@ -19,6 +23,8 @@
             </Grid>
 
             <Label x:Name="lbl_res" />  <!-- Label para exibir as informações sobre a previsão do tempo -->
+
+            <WebView x:Name="wv_mapa" HeightRequest="500" />
 
         </VerticalStackLayout>
     </ScrollView>
